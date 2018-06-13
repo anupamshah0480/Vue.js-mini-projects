@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue App</title>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="http://davidtkatz.com/public_css/vue.css">
+</head>
+<body>
+	<div id="app">
+		<span>Change the element</span>
+		<input v-model="text" placeholder="text...">
+		<div>Lowecase version:{{lowerText}}</div>
+	</div>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#app',
+			data: {
+				text:''		
+			},
+			computed:{
+				lowerText(){
+					return this.text.toLowerCase()
+				}
+			}
+		})
+	</script>
+</body>
+</html>
